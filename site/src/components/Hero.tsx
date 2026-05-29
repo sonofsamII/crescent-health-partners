@@ -15,17 +15,15 @@ export function Hero() {
           </span>
         </div>
 
-        <div className="my-16 max-w-[18ch] sm:my-24">
+        <div className="my-16 max-w-[26ch] sm:my-24">
           <motion.h1
             initial={reduced ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.2, 0.7, 0.2, 1] }}
             className="h-display"
-            style={{ fontSize: "clamp(2.6rem, 9vw, 6.5rem)" }}
+            style={{ fontSize: "clamp(2.4rem, 7.5vw, 5.6rem)" }}
           >
-            Wound care, and<br/>
-            <span className="h-serif text-[--color-rose]">the kind of clinic</span><br/>
-            that knows your name.
+            Wound care, and <span className="h-serif text-[--color-rose]">the kind of clinic</span> that knows your name.
           </motion.h1>
 
           <motion.p
