@@ -70,23 +70,23 @@ export default function DrugTestingPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <section className="border-b border-[--color-border] hero-bg">
+      <section className="border-b border-[var(--color-border)] hero-bg">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10 sm:py-32">
           <div className="eyebrow mb-5">Occupational health · Drug testing</div>
           <h1 className="h-display max-w-[20ch]" style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)" }}>
             Drug testing.<br/>
-            <span className="h-serif text-[--color-rose]">DOT, non-DOT, fast</span>.
+            <span className="h-serif text-[var(--color-rose)]">DOT, non-DOT, fast</span>.
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[--color-muted] leading-relaxed text-lg">
+          <p className="mt-8 max-w-[58ch] text-[var(--color-muted)] leading-relaxed text-lg">
             CLIA-certified lab. DOT chain-of-custody screens, non-DOT 5/10-panel,
             rapid in-office or send-out — we run the panel your employer needs.
             Walk-ins welcome at both Sumter and Columbia.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/contact" className="bg-[--color-rose] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+            <Link href="/contact" className="bg-[var(--color-rose)] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
               Set up an employer account
             </Link>
-            <a href={`tel:${CLINIC.phone}`} className="border border-[--color-plum]/30 text-[--color-plum] px-7 py-3.5 font-semibold rounded-full hover:border-[--color-plum] transition-colors">
+            <a href={`tel:${CLINIC.phone}`} className="border border-[var(--color-plum)]/30 text-[var(--color-plum)] px-7 py-3.5 font-semibold rounded-full hover:border-[var(--color-plum)] transition-colors">
               Call {CLINIC.phoneDisplay}
             </a>
           </div>
@@ -98,7 +98,7 @@ export default function DrugTestingPage() {
         <Reveal className="mb-12">
           <div className="eyebrow mb-3">What we offer</div>
           <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
-            The panel <span className="h-serif text-[--color-rose]">your employer asked for</span>.
+            The panel <span className="h-serif text-[var(--color-rose)]">your employer asked for</span>.
           </h2>
         </Reveal>
 
@@ -113,8 +113,8 @@ export default function DrugTestingPage() {
           ].map((s) => (
             <Reveal key={s.t}>
               <div className="card p-7 h-full">
-                <h3 className="font-display text-xl text-[--color-plum] leading-tight">{s.t}</h3>
-                <p className="mt-3 text-[--color-muted] text-[14px] leading-relaxed">{s.d}</p>
+                <h3 className="font-display text-xl text-[var(--color-plum)] leading-tight">{s.t}</h3>
+                <p className="mt-3 text-[var(--color-muted)] text-[14px] leading-relaxed">{s.d}</p>
               </div>
             </Reveal>
           ))}
@@ -122,12 +122,12 @@ export default function DrugTestingPage() {
       </section>
 
       {/* Categories */}
-      <section className="border-y border-[--color-border] bg-white">
+      <section className="border-y border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10">
           <Reveal className="mb-10">
             <div className="eyebrow mb-3">Testing categories</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
-              All <span className="h-serif text-[--color-rose]">six categories</span> covered.
+              All <span className="h-serif text-[var(--color-rose)]">six categories</span> covered.
             </h2>
           </Reveal>
           <div className="grid gap-x-12 gap-y-3 md:grid-cols-2">
@@ -139,9 +139,9 @@ export default function DrugTestingPage() {
               "Return-to-duty",
               "Follow-up testing",
             ].map((c) => (
-              <div key={c} className="flex items-baseline gap-3 border-b border-[--color-border] py-3">
-                <span className="font-mono text-[10px] text-[--color-rose]">●</span>
-                <span className="text-[--color-ink]">{c}</span>
+              <div key={c} className="flex items-baseline gap-3 border-b border-[var(--color-border)] py-3">
+                <span className="font-mono text-[10px] text-[var(--color-rose)]">●</span>
+                <span className="text-[var(--color-ink)]">{c}</span>
               </div>
             ))}
           </div>
@@ -153,36 +153,36 @@ export default function DrugTestingPage() {
         <Reveal className="mb-10">
           <div className="eyebrow mb-3">FAQ</div>
           <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)" }}>
-            Drug testing, <span className="h-serif text-[--color-rose]">straight answers</span>.
+            Drug testing, <span className="h-serif text-[var(--color-rose)]">straight answers</span>.
           </h2>
         </Reveal>
         <dl className="space-y-2">
           {FAQS.map((f, i) => (
             <Reveal key={i}>
-              <details className="group border border-[--color-border] rounded-md overflow-hidden">
-                <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[--color-linen]">
-                  <dt className="font-display text-[--color-plum] text-lg leading-snug">{f.q}</dt>
-                  <span className="text-[--color-rose] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
+              <details className="group border border-[var(--color-border)] rounded-md overflow-hidden">
+                <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[var(--color-linen)]">
+                  <dt className="font-display text-[var(--color-plum)] text-lg leading-snug">{f.q}</dt>
+                  <span className="text-[var(--color-rose)] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <dd className="px-5 pb-5 text-[--color-muted] leading-relaxed">{f.a}</dd>
+                <dd className="px-5 pb-5 text-[var(--color-muted)] leading-relaxed">{f.a}</dd>
               </details>
             </Reveal>
           ))}
         </dl>
       </section>
 
-      <section className="bg-[--color-plum] text-[--color-linen]">
+      <section className="bg-[var(--color-plum)] text-[var(--color-linen)]">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center sm:px-10">
           <Reveal>
-            <h2 className="h-display text-[--color-linen]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
+            <h2 className="h-display text-[var(--color-linen)]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
               Walk in. Or<br/>
-              <span className="h-serif text-[--color-rose-soft]">set up an employer account</span>.
+              <span className="h-serif text-[var(--color-rose-soft)]">set up an employer account</span>.
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${CLINIC.phone}`} className="bg-[--color-rose] text-white px-7 py-4 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+              <a href={`tel:${CLINIC.phone}`} className="bg-[var(--color-rose)] text-white px-7 py-4 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
                 Call {CLINIC.phoneDisplay}
               </a>
-              <Link href="/contact" className="border border-[--color-linen]/30 text-[--color-linen] px-7 py-4 font-semibold rounded-full hover:border-[--color-linen] transition-colors">
+              <Link href="/contact" className="border border-[var(--color-linen)]/30 text-[var(--color-linen)] px-7 py-4 font-semibold rounded-full hover:border-[var(--color-linen)] transition-colors">
                 Set up an account →
               </Link>
             </div>

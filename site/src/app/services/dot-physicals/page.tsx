@@ -81,23 +81,23 @@ export default function DotPhysicalsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(examSchema) }} />
 
-      <section className="border-b border-[--color-border] hero-bg">
+      <section className="border-b border-[var(--color-border)] hero-bg">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10 sm:py-32">
           <div className="eyebrow mb-5">Occupational health · DOT</div>
           <h1 className="h-display max-w-[20ch]" style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)" }}>
             DOT physicals.<br/>
-            <span className="h-serif text-[--color-rose]">Same day. Truck parking.</span>
+            <span className="h-serif text-[var(--color-rose)]">Same day. Truck parking.</span>
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[--color-muted] leading-relaxed text-lg">
+          <p className="mt-8 max-w-[58ch] text-[var(--color-muted)] leading-relaxed text-lg">
             Full-time Certified DOT Examiners on staff. We send some of the
             paperwork ahead electronically so the visit goes faster. Bring your
             documentation and we&apos;ll usually have you certified the same day.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/contact" className="bg-[--color-rose] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+            <Link href="/contact" className="bg-[var(--color-rose)] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
               Request an appointment
             </Link>
-            <a href={`tel:${CLINIC.phone}`} className="border border-[--color-plum]/30 text-[--color-plum] px-7 py-3.5 font-semibold rounded-full hover:border-[--color-plum] transition-colors">
+            <a href={`tel:${CLINIC.phone}`} className="border border-[var(--color-plum)]/30 text-[var(--color-plum)] px-7 py-3.5 font-semibold rounded-full hover:border-[var(--color-plum)] transition-colors">
               Call {CLINIC.phoneDisplay}
             </a>
           </div>
@@ -110,9 +110,9 @@ export default function DotPhysicalsPage() {
           <Reveal className="md:col-span-5">
             <div className="eyebrow mb-3">Before you come in</div>
             <h2 className="h-display" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)" }}>
-              What to <span className="h-serif text-[--color-rose]">bring</span>.
+              What to <span className="h-serif text-[var(--color-rose)]">bring</span>.
             </h2>
-            <p className="mt-5 text-[--color-muted] leading-relaxed">
+            <p className="mt-5 text-[var(--color-muted)] leading-relaxed">
               Same-day certification depends on us having the documentation we
               need. The more you bring, the better.
             </p>
@@ -130,9 +130,9 @@ export default function DotPhysicalsPage() {
                   "Hypertension: home BP log if you keep one",
                   "Cardiac history: most recent stress test, EKG, or specialist note",
                 ].map((c) => (
-                  <li key={c} className="flex items-baseline gap-3 border-b border-[--color-border] py-3">
-                    <span className="font-mono text-[10px] text-[--color-rose]">●</span>
-                    <span className="text-[--color-ink]">{c}</span>
+                  <li key={c} className="flex items-baseline gap-3 border-b border-[var(--color-border)] py-3">
+                    <span className="font-mono text-[10px] text-[var(--color-rose)]">●</span>
+                    <span className="text-[var(--color-ink)]">{c}</span>
                   </li>
                 ))}
               </ul>
@@ -142,16 +142,16 @@ export default function DotPhysicalsPage() {
       </section>
 
       {/* Visit walkthrough */}
-      <section className="border-y border-[--color-border] bg-white">
+      <section className="border-y border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10">
           <Reveal className="mb-12">
             <div className="eyebrow mb-3">The visit</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
-              Roughly 30–45 minutes, <span className="h-serif text-[--color-rose]">end to end</span>.
+              Roughly 30–45 minutes, <span className="h-serif text-[var(--color-rose)]">end to end</span>.
             </h2>
           </Reveal>
 
-          <ol className="grid gap-px bg-[--color-border] border border-[--color-border] md:grid-cols-4">
+          <ol className="grid gap-px bg-[var(--color-border)] border border-[var(--color-border)] md:grid-cols-4">
             {[
               { n: "01", t: "Forms", d: "We send you the medical history forms electronically ahead of time. Fill them out at home — it cuts your visit time in half." },
               { n: "02", t: "Vitals + vision/hearing", d: "Blood pressure, vision test (with corrective lenses if you use them), hearing (whisper test or audiometry as needed)." },
@@ -159,9 +159,9 @@ export default function DotPhysicalsPage() {
               { n: "04", t: "Card issued", d: "If you meet criteria, you walk out with your medical certificate. If you need follow-up, we tell you exactly what we need and when." },
             ].map((s) => (
               <li key={s.n} className="bg-white p-7">
-                <div className="font-mono text-[11px] text-[--color-rose-deep] tracking-[0.22em] mb-3">{s.n}</div>
-                <h3 className="font-display text-lg text-[--color-plum] mb-3">{s.t}</h3>
-                <p className="text-[14px] text-[--color-muted] leading-relaxed">{s.d}</p>
+                <div className="font-mono text-[11px] text-[var(--color-rose-deep)] tracking-[0.22em] mb-3">{s.n}</div>
+                <h3 className="font-display text-lg text-[var(--color-plum)] mb-3">{s.t}</h3>
+                <p className="text-[14px] text-[var(--color-muted)] leading-relaxed">{s.d}</p>
               </li>
             ))}
           </ol>
@@ -173,36 +173,36 @@ export default function DotPhysicalsPage() {
         <Reveal className="mb-10">
           <div className="eyebrow mb-3">FAQ</div>
           <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)" }}>
-            DOT physicals, <span className="h-serif text-[--color-rose]">straight answers</span>.
+            DOT physicals, <span className="h-serif text-[var(--color-rose)]">straight answers</span>.
           </h2>
         </Reveal>
         <dl className="space-y-2">
           {FAQS.map((f, i) => (
             <Reveal key={i}>
-              <details className="group border border-[--color-border] rounded-md overflow-hidden">
-                <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[--color-linen]">
-                  <dt className="font-display text-[--color-plum] text-lg leading-snug">{f.q}</dt>
-                  <span className="text-[--color-rose] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
+              <details className="group border border-[var(--color-border)] rounded-md overflow-hidden">
+                <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[var(--color-linen)]">
+                  <dt className="font-display text-[var(--color-plum)] text-lg leading-snug">{f.q}</dt>
+                  <span className="text-[var(--color-rose)] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <dd className="px-5 pb-5 text-[--color-muted] leading-relaxed">{f.a}</dd>
+                <dd className="px-5 pb-5 text-[var(--color-muted)] leading-relaxed">{f.a}</dd>
               </details>
             </Reveal>
           ))}
         </dl>
       </section>
 
-      <section className="bg-[--color-plum] text-[--color-linen]">
+      <section className="bg-[var(--color-plum)] text-[var(--color-linen)]">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center sm:px-10">
           <Reveal>
-            <h2 className="h-display text-[--color-linen]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
+            <h2 className="h-display text-[var(--color-linen)]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
               Show up. Bring the paperwork.<br/>
-              <span className="h-serif text-[--color-rose-soft]">Drive away certified</span>.
+              <span className="h-serif text-[var(--color-rose-soft)]">Drive away certified</span>.
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${CLINIC.phone}`} className="bg-[--color-rose] text-white px-7 py-4 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+              <a href={`tel:${CLINIC.phone}`} className="bg-[var(--color-rose)] text-white px-7 py-4 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
                 Call {CLINIC.phoneDisplay}
               </a>
-              <Link href="/contact" className="border border-[--color-linen]/30 text-[--color-linen] px-7 py-4 font-semibold rounded-full hover:border-[--color-linen] transition-colors">
+              <Link href="/contact" className="border border-[var(--color-linen)]/30 text-[var(--color-linen)] px-7 py-4 font-semibold rounded-full hover:border-[var(--color-linen)] transition-colors">
                 Request an appointment →
               </Link>
             </div>

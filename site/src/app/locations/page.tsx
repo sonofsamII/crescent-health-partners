@@ -11,20 +11,20 @@ export const metadata: Metadata = {
 export default function LocationsPage() {
   return (
     <>
-      <section className="border-b border-[--color-border] hero-bg">
+      <section className="border-b border-[var(--color-border)] hero-bg">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10 sm:py-32">
           <div className="eyebrow mb-5">Locations</div>
           <h1 className="h-display max-w-[20ch]" style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)" }}>
             Two clinics.<br/>
-            <span className="h-serif text-[--color-rose]">One phone number</span>.
+            <span className="h-serif text-[var(--color-rose)]">One phone number</span>.
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[--color-muted] leading-relaxed text-lg">
+          <p className="mt-8 max-w-[58ch] text-[var(--color-muted)] leading-relaxed text-lg">
             Same team, same approach, two cities. Walk-ins welcome at both —
             calling ahead just means a shorter wait.
           </p>
           <a
             href={`tel:${CLINIC.phone}`}
-            className="mt-8 inline-block font-mono text-2xl text-[--color-plum] hover:text-[--color-rose]"
+            className="mt-8 inline-block font-mono text-2xl text-[var(--color-plum)] hover:text-[var(--color-rose)]"
           >
             {CLINIC.phoneDisplay}
           </a>
@@ -37,37 +37,37 @@ export default function LocationsPage() {
             <Reveal key={loc.id}>
               <article id={loc.id} className="card p-8 h-full">
                 <div className="eyebrow mb-3">{loc.name}</div>
-                <h2 className="font-display text-2xl text-[--color-plum] mb-2 leading-tight">
+                <h2 className="font-display text-2xl text-[var(--color-plum)] mb-2 leading-tight">
                   {loc.city}, {loc.state}
                 </h2>
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${loc.mapsQuery}`}
                   target="_blank"
                   rel="noopener"
-                  className="block text-[--color-plum] hover:text-[--color-rose] leading-relaxed mb-4"
+                  className="block text-[var(--color-plum)] hover:text-[var(--color-rose)] leading-relaxed mb-4"
                 >
                   {loc.street}<br/>
                   {loc.city}, {loc.state} {loc.zip}
                 </a>
                 {loc.notes && (
-                  <p className="text-sm text-[--color-muted] mb-6 italic">{loc.notes}</p>
+                  <p className="text-sm text-[var(--color-muted)] mb-6 italic">{loc.notes}</p>
                 )}
 
-                <div className="border-t border-[--color-border] pt-5 mt-6">
+                <div className="border-t border-[var(--color-border)] pt-5 mt-6">
                   <div className="eyebrow mb-3">Hours</div>
                   <ul className="space-y-1.5 text-sm">
                     {HOURS.map((h) => (
                       <li key={h.day} className="flex justify-between gap-6">
-                        <span className="text-[--color-ink]">{h.day}</span>
-                        <span className="font-mono text-[--color-muted]">{h.hours}</span>
+                        <span className="text-[var(--color-ink)]">{h.day}</span>
+                        <span className="font-mono text-[var(--color-muted)]">{h.hours}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="border-t border-[--color-border] pt-5 mt-6">
+                <div className="border-t border-[var(--color-border)] pt-5 mt-6">
                   <div className="eyebrow mb-3">Get directions</div>
-                  <div className="aspect-[4/3] w-full overflow-hidden rounded border border-[--color-border]">
+                  <div className="aspect-[4/3] w-full overflow-hidden rounded border border-[var(--color-border)]">
                     <iframe
                       title={`Map of ${loc.name}`}
                       src={`https://www.google.com/maps?q=${loc.mapsQuery}&output=embed`}

@@ -64,14 +64,14 @@ const RESOURCES = [
 export default function PatientResourcesPage() {
   return (
     <>
-      <section className="border-b border-[--color-border] hero-bg">
+      <section className="border-b border-[var(--color-border)] hero-bg">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10 sm:py-32">
           <div className="eyebrow mb-5">Patient resources</div>
           <h1 className="h-display max-w-[22ch]" style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)" }}>
             What to bring.<br/>
-            <span className="h-serif text-[--color-rose]">What to expect</span>.
+            <span className="h-serif text-[var(--color-rose)]">What to expect</span>.
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[--color-muted] leading-relaxed text-lg">
+          <p className="mt-8 max-w-[58ch] text-[var(--color-muted)] leading-relaxed text-lg">
             We try to make every visit faster than the urgent-care line. Here&apos;s
             how to help us help you.
           </p>
@@ -83,12 +83,12 @@ export default function PatientResourcesPage() {
           {RESOURCES.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.05}>
               <article className="card p-8 h-full">
-                <h2 className="font-display text-xl text-[--color-plum] mb-4 leading-tight">{r.title}</h2>
+                <h2 className="font-display text-xl text-[var(--color-plum)] mb-4 leading-tight">{r.title}</h2>
                 <ul className="space-y-2.5 text-sm">
                   {r.items.map((item) => (
                     <li key={item} className="flex items-baseline gap-3">
-                      <span className="font-mono text-[10px] text-[--color-rose]">●</span>
-                      <span className="text-[--color-ink] leading-relaxed">{item}</span>
+                      <span className="font-mono text-[10px] text-[var(--color-rose)]">●</span>
+                      <span className="text-[var(--color-ink)] leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -98,21 +98,21 @@ export default function PatientResourcesPage() {
         </div>
       </section>
 
-      <section className="border-t border-[--color-border] bg-white">
+      <section className="border-t border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-[900px] px-6 py-20 text-center sm:px-10">
           <Reveal>
             <h2 className="h-display" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)" }}>
-              Forms can come via email <span className="h-serif text-[--color-rose]">before your visit</span>.
+              Forms can come via email <span className="h-serif text-[var(--color-rose)]">before your visit</span>.
             </h2>
-            <p className="mt-5 text-[--color-muted] leading-relaxed">
+            <p className="mt-5 text-[var(--color-muted)] leading-relaxed">
               When you book, we send DOT and intake forms to your email so you
               can fill them out at home. Cuts the in-clinic visit in half.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="bg-[--color-rose] text-white px-7 py-4 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+              <Link href="/contact" className="bg-[var(--color-rose)] text-white px-7 py-4 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
                 Request an appointment
               </Link>
-              <a href={`tel:${CLINIC.phone}`} className="border border-[--color-plum]/30 text-[--color-plum] px-7 py-4 font-semibold rounded-full hover:border-[--color-plum] transition-colors">
+              <a href={`tel:${CLINIC.phone}`} className="border border-[var(--color-plum)]/30 text-[var(--color-plum)] px-7 py-4 font-semibold rounded-full hover:border-[var(--color-plum)] transition-colors">
                 Call {CLINIC.phoneDisplay}
               </a>
             </div>

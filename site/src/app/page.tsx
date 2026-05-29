@@ -118,7 +118,7 @@ export default function HomePage() {
       <Hero />
 
       {/* ───── 2. Service pillars ───── */}
-      <section className="bg-[--color-paper]">
+      <section className="bg-[var(--color-paper)]">
         <div className="mx-auto max-w-[1400px] px-6 py-28 sm:px-10 sm:py-32">
           <Reveal className="mx-auto mb-16 max-w-[640px] text-center">
             <div className="eyebrow mb-4">What we do</div>
@@ -131,17 +131,17 @@ export default function HomePage() {
             </p>
           </Reveal>
 
-          <div className="grid gap-px border border-[--color-border] bg-[--color-border] md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-px border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.06} className="bg-white">
                 <Link
                   href={p.href}
-                  className="group flex h-full flex-col justify-between gap-6 p-9 transition-colors hover:bg-[--color-cream]"
+                  className="group flex h-full flex-col justify-between gap-6 p-9 transition-colors hover:bg-[var(--color-cream)]"
                 >
                   <div>
-                    <div className="font-mono text-[11px] tracking-[0.32em] text-[--color-muted]">0{i + 1}</div>
+                    <div className="font-mono text-[11px] tracking-[0.32em] text-[var(--color-muted)]">0{i + 1}</div>
                     <h3
-                      className="mt-4 font-serif text-[28px] text-[--color-ink]"
+                      className="mt-4 font-serif text-[28px] text-[var(--color-ink)]"
                       style={{ lineHeight: 1.15, letterSpacing: "0.005em" }}
                     >
                       {p.title}
@@ -150,7 +150,7 @@ export default function HomePage() {
                   </div>
                   <span
                     aria-hidden
-                    className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[--color-ink] transition-transform group-hover:translate-x-1"
+                    className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[var(--color-ink)] transition-transform group-hover:translate-x-1"
                   >
                     Learn more <span>→</span>
                   </span>
@@ -162,7 +162,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── 3. Meet your providers ───── */}
-      <section className="bg-[--color-cream]">
+      <section className="bg-[var(--color-cream)]">
         <div className="mx-auto max-w-[1400px] px-6 py-28 sm:px-10 sm:py-32">
           <Reveal className="mb-16">
             <div className="eyebrow mb-4">Meet your providers</div>
@@ -181,19 +181,19 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div>
-                    <div className="font-mono text-[10.5px] uppercase tracking-[0.32em] text-[--color-muted]">
+                    <div className="font-mono text-[10.5px] uppercase tracking-[0.32em] text-[var(--color-muted)]">
                       {p.role}
                     </div>
-                    <h3 className="mt-3 font-serif text-[26px] text-[--color-ink]" style={{ lineHeight: 1.15 }}>
+                    <h3 className="mt-3 font-serif text-[26px] text-[var(--color-ink)]" style={{ lineHeight: 1.15 }}>
                       {p.name}
                     </h3>
-                    <div className="mt-1 font-mono text-[12px] text-[--color-rose-deep]">{p.credentials}</div>
+                    <div className="mt-1 font-mono text-[12px] text-[var(--color-rose-deep)]">{p.credentials}</div>
                     <p className="prose-body mt-5 text-[15px]">{p.bio}</p>
                     <div className="mt-5 flex flex-wrap gap-2">
                       {p.specialties.map((sp) => (
                         <span
                           key={sp}
-                          className="rounded-full border border-[--color-border-strong] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[--color-ink]"
+                          className="rounded-full border border-[var(--color-border-strong)] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.28em] text-[var(--color-ink)]"
                         >
                           {sp}
                         </span>
@@ -207,7 +207,7 @@ export default function HomePage() {
           <Reveal className="mt-12">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[--color-ink] hover:text-[--color-rose-deep]"
+              className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[var(--color-ink)] hover:text-[var(--color-rose-deep)]"
             >
               Read the full story →
             </Link>
@@ -216,7 +216,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── 4. What we treat — horizontal scroll list ───── */}
-      <section className="border-y border-[--color-border] bg-[--color-paper] py-20 sm:py-24">
+      <section className="border-y border-[var(--color-border)] bg-[var(--color-paper)] py-20 sm:py-24">
         <Reveal className="mx-auto mb-10 max-w-[1400px] px-6 sm:px-10">
           <div className="eyebrow mb-4">What we treat</div>
           <h2 className="h-display max-w-[24ch]" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}>
@@ -229,10 +229,10 @@ export default function HomePage() {
             {CONDITIONS_TREATED.map((c) => (
               <span
                 key={c}
-                className="font-serif italic text-[--color-ink]"
+                className="font-serif italic text-[var(--color-ink)]"
                 style={{ fontSize: "clamp(1.4rem, 2.4vw, 2.1rem)", whiteSpace: "nowrap", lineHeight: 1.4 }}
               >
-                {c}<span className="ml-12 text-[--color-rose] not-italic" aria-hidden>·</span>
+                {c}<span className="ml-12 text-[var(--color-rose)] not-italic" aria-hidden>·</span>
               </span>
             ))}
           </div>
@@ -240,13 +240,13 @@ export default function HomePage() {
       </section>
 
       {/* ───── 5. Testimonials marquee (PLACEHOLDER) ───── */}
-      <section className="bg-[--color-cream-deep] py-28 sm:py-32">
+      <section className="bg-[var(--color-cream-deep)] py-28 sm:py-32">
         <Reveal className="mx-auto mb-14 max-w-[1400px] px-6 text-center sm:px-10">
           <div className="eyebrow mb-4">In their words</div>
           <h2 className="h-display max-w-[28ch] mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 3.4rem)" }}>
             From the patients we&apos;ve treated.
           </h2>
-          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.3em] text-[--color-muted]">
+          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--color-muted)]">
             [Placeholder copy — real reviews coming]
           </p>
         </Reveal>
@@ -257,18 +257,18 @@ export default function HomePage() {
                 key={`${t.name}-${i}`}
                 className="card flex w-[340px] shrink-0 flex-col gap-6 p-8 sm:w-[420px]"
               >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-[--color-rose]" aria-hidden>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--color-rose)]" aria-hidden>
                   <path d="M3 17v3h6v-3c0-1.5 1-2.5 2.5-2.5V12c-4 0-8.5 1-8.5 5zm12 0v3h6v-3c0-1.5 1-2.5 2.5-2.5V12c-4 0-8.5 1-8.5 5z" transform="rotate(180 12 12)"/>
                 </svg>
                 <blockquote
-                  className="font-serif italic text-[--color-ink]"
+                  className="font-serif italic text-[var(--color-ink)]"
                   style={{ fontSize: "17px", lineHeight: 1.55 }}
                 >
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-auto border-t border-[--color-border] pt-4">
-                  <div className="font-serif text-[15px] text-[--color-ink]">{t.name}</div>
-                  <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[--color-muted]">
+                <figcaption className="mt-auto border-t border-[var(--color-border)] pt-4">
+                  <div className="font-serif text-[15px] text-[var(--color-ink)]">{t.name}</div>
+                  <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.28em] text-[var(--color-muted)]">
                     {t.context}
                     {t.placeholder && " · [PLACEHOLDER]"}
                   </div>
@@ -280,7 +280,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── 6. Two locations ───── */}
-      <section className="bg-[--color-paper]">
+      <section className="bg-[var(--color-paper)]">
         <div className="mx-auto max-w-[1400px] px-6 py-28 sm:px-10 sm:py-32">
           <div className="grid gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
@@ -294,7 +294,7 @@ export default function HomePage() {
               </p>
               <a
                 href={`tel:${CLINIC.phone}`}
-                className="mt-8 inline-block font-mono text-[24px] text-[--color-ink] hover:text-[--color-rose-deep]"
+                className="mt-8 inline-block font-mono text-[24px] text-[var(--color-ink)] hover:text-[var(--color-rose-deep)]"
               >
                 {CLINIC.phoneDisplay}
               </a>
@@ -309,15 +309,15 @@ export default function HomePage() {
                       href={`https://www.google.com/maps/search/?api=1&query=${loc.mapsQuery}`}
                       target="_blank"
                       rel="noopener"
-                      className="font-serif text-[19px] leading-snug text-[--color-ink] hover:text-[--color-rose-deep]"
+                      className="font-serif text-[19px] leading-snug text-[var(--color-ink)] hover:text-[var(--color-rose-deep)]"
                     >
                       {loc.street}<br/>
                       {loc.city}, {loc.state} {loc.zip}
                     </a>
                     {loc.notes && (
-                      <p className="mt-4 text-[13px] leading-relaxed text-[--color-muted]">{loc.notes}</p>
+                      <p className="mt-4 text-[13px] leading-relaxed text-[var(--color-muted)]">{loc.notes}</p>
                     )}
-                    <div className="mt-6 border-t border-[--color-border] pt-4 font-mono text-[10.5px] uppercase tracking-[0.28em] text-[--color-muted]">
+                    <div className="mt-6 border-t border-[var(--color-border)] pt-4 font-mono text-[10.5px] uppercase tracking-[0.28em] text-[var(--color-muted)]">
                       Mon – Fri · 8:30 AM – 5 PM
                     </div>
                   </article>
@@ -329,7 +329,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── 7. Insurance & payment ───── */}
-      <section className="bg-[--color-cream]">
+      <section className="bg-[var(--color-cream)]">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center sm:px-10 sm:py-28">
           <Reveal>
             <div className="eyebrow mb-4">Insurance &amp; payment</div>
@@ -344,14 +344,14 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 opacity-70">
               {["Medicare", "Medicaid", "BlueCross BS", "Aetna", "Cigna", "UnitedHealth", "Tricare"].map((p) => (
-                <span key={p} className="font-mono text-[11px] uppercase tracking-[0.32em] text-[--color-muted]">
+                <span key={p} className="font-mono text-[11px] uppercase tracking-[0.32em] text-[var(--color-muted)]">
                   {p}
                 </span>
               ))}
             </div>
             <Link
               href="/insurance"
-              className="mt-10 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[--color-ink] hover:text-[--color-rose-deep]"
+              className="mt-10 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-[var(--color-ink)] hover:text-[var(--color-rose-deep)]"
             >
               See full insurance list →
             </Link>
@@ -360,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── 8. Final CTA band ───── */}
-      <section className="relative isolate overflow-hidden bg-[--color-ink] text-white">
+      <section className="relative isolate overflow-hidden bg-[var(--color-ink)] text-white">
         <div className="mx-auto max-w-[1100px] px-6 py-28 text-center sm:px-10 sm:py-32">
           <Reveal>
             <div className="font-mono text-[11px] uppercase tracking-[0.32em] text-white/55">
@@ -370,7 +370,7 @@ export default function HomePage() {
               className="mx-auto mt-6 max-w-[22ch] font-serif text-white"
               style={{ fontSize: "clamp(2.4rem, 5.5vw, 4rem)", lineHeight: 1.08 }}
             >
-              Call <em className="text-[--color-rose-soft]">(803) 883-4033</em> or request an appointment.
+              Call <em className="text-[var(--color-rose-soft)]">(803) 883-4033</em> or request an appointment.
             </h2>
             <p className="mx-auto mt-7 max-w-[52ch] text-[17px] leading-relaxed text-white/75">
               Walk in or call ahead. Two clinics in Sumter and Columbia, one

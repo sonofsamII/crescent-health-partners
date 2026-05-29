@@ -36,11 +36,11 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border-t border-[--color-rose] pt-8">
-        <p className="h-serif text-2xl text-[--color-rose]">Got it. Thank you.</p>
-        <p className="mt-3 text-[--color-muted] leading-relaxed">
+      <div className="border-t border-[var(--color-rose)] pt-8">
+        <p className="h-serif text-2xl text-[var(--color-rose)]">Got it. Thank you.</p>
+        <p className="mt-3 text-[var(--color-muted)] leading-relaxed">
           We&apos;ll reach out the next business day. If your concern is urgent,
-          please call <a href="tel:+18038834033" className="text-[--color-plum] hover:text-[--color-rose] underline underline-offset-2">(803) 883-4033</a>.
+          please call <a href="tel:+18038834033" className="text-[var(--color-plum)] hover:text-[var(--color-rose)] underline underline-offset-2">(803) 883-4033</a>.
         </p>
       </div>
     );
@@ -62,14 +62,14 @@ export function ContactForm() {
 
       <div>
         <label className="block">
-          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[--color-rose-deep] mb-2">
+          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[var(--color-rose-deep)] mb-2">
             Reason for visit
           </span>
           <select
             name="reason"
             required
             defaultValue=""
-            className="w-full bg-[--color-linen] border border-[--color-border] rounded-md px-4 py-3 text-[--color-ink] focus:border-[--color-rose] focus:outline-none focus:ring-2 focus:ring-[--color-rose-soft]"
+            className="w-full bg-[var(--color-linen)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-ink)] focus:border-[var(--color-rose)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-soft)]"
           >
             <option value="" disabled>Pick the closest match</option>
             <option>Wound care evaluation</option>
@@ -92,41 +92,41 @@ export function ContactForm() {
 
       <div>
         <label className="block">
-          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[--color-rose-deep] mb-2">
+          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[var(--color-rose-deep)] mb-2">
             Best time to call you back
           </span>
           <input
             type="text"
             name="callbackTime"
             placeholder="e.g. weekday mornings, after 5 PM, anytime"
-            className="w-full bg-[--color-linen] border border-[--color-border] rounded-md px-4 py-3 text-[--color-ink] focus:border-[--color-rose] focus:outline-none focus:ring-2 focus:ring-[--color-rose-soft]"
+            className="w-full bg-[var(--color-linen)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-ink)] focus:border-[var(--color-rose)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-soft)]"
           />
         </label>
       </div>
 
       <div>
         <label className="block">
-          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[--color-rose-deep] mb-2">
+          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[var(--color-rose-deep)] mb-2">
             Tell us a little more (optional)
           </span>
           <textarea
             name="message"
             rows={4}
             placeholder="What's going on, any history we should know, preferred location..."
-            className="w-full bg-[--color-linen] border border-[--color-border] rounded-md px-4 py-3 text-[--color-ink] focus:border-[--color-rose] focus:outline-none focus:ring-2 focus:ring-[--color-rose-soft]"
+            className="w-full bg-[var(--color-linen)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-ink)] focus:border-[var(--color-rose)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-soft)]"
           />
         </label>
       </div>
 
       <div>
         <label className="block">
-          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[--color-rose-deep] mb-2">
+          <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[var(--color-rose-deep)] mb-2">
             Preferred location
           </span>
           <select
             name="location"
             defaultValue="Sumter"
-            className="w-full bg-[--color-linen] border border-[--color-border] rounded-md px-4 py-3 text-[--color-ink] focus:border-[--color-rose] focus:outline-none focus:ring-2 focus:ring-[--color-rose-soft]"
+            className="w-full bg-[var(--color-linen)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-ink)] focus:border-[var(--color-rose)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-soft)]"
           >
             <option>Sumter (212 Broad St)</option>
             <option>Columbia (Garners Ferry, Tue/Thu)</option>
@@ -135,7 +135,7 @@ export function ContactForm() {
         </label>
       </div>
 
-      <p className="text-[12px] text-[--color-muted] italic">
+      <p className="text-[12px] text-[var(--color-muted)] italic">
         Please do not include sensitive medical history in this form. We&apos;ll cover that
         on the phone or in person where it&apos;s private.
       </p>
@@ -143,7 +143,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="bg-[--color-rose] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="bg-[var(--color-rose)] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Sending..." : "Send message →"}
       </button>
@@ -168,7 +168,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[--color-rose-deep] mb-2">
+      <span className="block text-[12px] font-mono uppercase tracking-[0.18em] text-[var(--color-rose-deep)] mb-2">
         {label}
       </span>
       <input
@@ -176,7 +176,7 @@ function Field({
         name={name}
         required={required}
         autoComplete={autoComplete}
-        className="w-full bg-[--color-linen] border border-[--color-border] rounded-md px-4 py-3 text-[--color-ink] focus:border-[--color-rose] focus:outline-none focus:ring-2 focus:ring-[--color-rose-soft]"
+        className="w-full bg-[var(--color-linen)] border border-[var(--color-border)] rounded-md px-4 py-3 text-[var(--color-ink)] focus:border-[var(--color-rose)] focus:outline-none focus:ring-2 focus:ring-[var(--color-rose-soft)]"
       />
     </label>
   );

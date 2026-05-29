@@ -28,8 +28,8 @@ export function MagneticButton({ children, href, className = "", variant = "prim
   const base = "inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm font-semibold transition-colors";
   const styles =
     variant === "primary"
-      ? "bg-[--color-rose] text-white hover:bg-[--color-rose-deep]"
-      : "border border-[--color-plum]/30 text-[--color-plum] hover:border-[--color-plum]";
+      ? "bg-[var(--color-rose)] text-white hover:bg-[var(--color-rose-deep)]"
+      : "border border-[var(--color-plum)]/30 text-[var(--color-plum)] hover:border-[var(--color-plum)]";
 
   const inner = (
     <motion.span

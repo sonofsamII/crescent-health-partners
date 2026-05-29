@@ -90,23 +90,23 @@ export default function WoundCarePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchema) }} />
 
-      <section className="border-b border-[--color-border] hero-bg">
+      <section className="border-b border-[var(--color-border)] hero-bg">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10 sm:py-32">
           <div className="eyebrow mb-5">Specialty · Wound care</div>
           <h1 className="h-display max-w-[20ch]" style={{ fontSize: "clamp(2.6rem, 7vw, 5rem)" }}>
-            The wounds that <span className="h-serif text-[--color-rose]">don&apos;t close</span>.
+            The wounds that <span className="h-serif text-[var(--color-rose)]">don&apos;t close</span>.
           </h1>
-          <p className="mt-8 max-w-[58ch] text-[--color-muted] leading-relaxed text-lg">
+          <p className="mt-8 max-w-[58ch] text-[var(--color-muted)] leading-relaxed text-lg">
             Wound care is what we are known for. Two board-certified nurse
             practitioners — one NAWCO-certified, both with decades at the
             bedside — running a physician-supervised wound program out of
             our Sumter clinic. We see what the urgent-care line can&apos;t.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href="/contact" className="bg-[--color-rose] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+            <Link href="/contact" className="bg-[var(--color-rose)] text-white px-7 py-3.5 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
               Request an appointment
             </Link>
-            <a href={`tel:${CLINIC.phone}`} className="border border-[--color-plum]/30 text-[--color-plum] px-7 py-3.5 font-semibold rounded-full hover:border-[--color-plum] transition-colors">
+            <a href={`tel:${CLINIC.phone}`} className="border border-[var(--color-plum)]/30 text-[var(--color-plum)] px-7 py-3.5 font-semibold rounded-full hover:border-[var(--color-plum)] transition-colors">
               Call {CLINIC.phoneDisplay}
             </a>
           </div>
@@ -119,9 +119,9 @@ export default function WoundCarePage() {
           <Reveal className="md:col-span-5">
             <div className="eyebrow mb-3">Conditions treated</div>
             <h2 className="h-display" style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)" }}>
-              What we see <span className="h-serif text-[--color-rose]">most often</span>.
+              What we see <span className="h-serif text-[var(--color-rose)]">most often</span>.
             </h2>
-            <p className="mt-5 text-[--color-muted] leading-relaxed">
+            <p className="mt-5 text-[var(--color-muted)] leading-relaxed">
               We treat the wounds your primary care doctor doesn&apos;t have time
               for and the ones the ER sends you home from with a packet and a
               follow-up to figure out.
@@ -144,9 +144,9 @@ export default function WoundCarePage() {
                   "Diabetic nail care",
                   "Limb salvage cases",
                 ].map((c) => (
-                  <li key={c} className="flex items-baseline gap-3 border-b border-[--color-border] py-3">
-                    <span className="font-mono text-[10px] text-[--color-rose]">●</span>
-                    <span className="text-[--color-ink]">{c}</span>
+                  <li key={c} className="flex items-baseline gap-3 border-b border-[var(--color-border)] py-3">
+                    <span className="font-mono text-[10px] text-[var(--color-rose)]">●</span>
+                    <span className="text-[var(--color-ink)]">{c}</span>
                   </li>
                 ))}
               </ul>
@@ -156,16 +156,16 @@ export default function WoundCarePage() {
       </section>
 
       {/* What the visit looks like */}
-      <section className="border-y border-[--color-border] bg-white">
+      <section className="border-y border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-24 sm:px-10">
           <Reveal className="mb-12">
             <div className="eyebrow mb-3">What to expect</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
-              The first wound care visit, <span className="h-serif text-[--color-rose]">step by step</span>.
+              The first wound care visit, <span className="h-serif text-[var(--color-rose)]">step by step</span>.
             </h2>
           </Reveal>
 
-          <ol className="grid gap-px bg-[--color-border] border border-[--color-border] md:grid-cols-4">
+          <ol className="grid gap-px bg-[var(--color-border)] border border-[var(--color-border)] md:grid-cols-4">
             {[
               { n: "01", t: "Measure & photograph", d: "Length, width, depth, tissue type. Photos go in your chart so we can track healing visit by visit." },
               { n: "02", t: "Assess vascular status", d: "Pulses, capillary refill, swelling. If we suspect arterial insufficiency, we refer for vascular workup." },
@@ -173,9 +173,9 @@ export default function WoundCarePage() {
               { n: "04", t: "Coordinate care", d: "Labs, imaging, biologics, HBOT referral — whatever the wound actually needs. We assemble the team." },
             ].map((s) => (
               <li key={s.n} className="bg-white p-7">
-                <div className="font-mono text-[11px] text-[--color-rose-deep] tracking-[0.22em] mb-3">{s.n}</div>
-                <h3 className="font-display text-lg text-[--color-plum] mb-3">{s.t}</h3>
-                <p className="text-[14px] text-[--color-muted] leading-relaxed">{s.d}</p>
+                <div className="font-mono text-[11px] text-[var(--color-rose-deep)] tracking-[0.22em] mb-3">{s.n}</div>
+                <h3 className="font-display text-lg text-[var(--color-plum)] mb-3">{s.t}</h3>
+                <p className="text-[14px] text-[var(--color-muted)] leading-relaxed">{s.d}</p>
               </li>
             ))}
           </ol>
@@ -189,7 +189,7 @@ export default function WoundCarePage() {
             <div className="card p-10 h-full">
               <div className="eyebrow mb-4">Beyond the standard</div>
               <h3 className="h-display text-2xl mb-5">Advanced modalities</h3>
-              <p className="text-[--color-muted] leading-relaxed">
+              <p className="text-[var(--color-muted)] leading-relaxed">
                 When the standard playbook stalls — and sometimes it does — we
                 can order biologics, growth-factor therapies, and stem-cell
                 modalities. Lisa is hyperbaric-trained and has supervised HBOT
@@ -202,7 +202,7 @@ export default function WoundCarePage() {
             <div className="card p-10 h-full">
               <div className="eyebrow mb-4">Can&apos;t get to us?</div>
               <h3 className="h-display text-2xl mb-5">Mobile wound care</h3>
-              <p className="text-[--color-muted] leading-relaxed">
+              <p className="text-[var(--color-muted)] leading-relaxed">
                 We bring wound care to hospice, in-home, and nursing facility
                 patients across Sumter and surrounding communities — Manning,
                 Bishopville, Lee County. Call the clinic to arrange a visit.
@@ -213,23 +213,23 @@ export default function WoundCarePage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-y border-[--color-border] bg-white">
+      <section className="border-y border-[var(--color-border)] bg-white">
         <div className="mx-auto max-w-[900px] px-6 py-24 sm:px-10">
           <Reveal className="mb-10">
             <div className="eyebrow mb-3">FAQ</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4vw, 2.8rem)" }}>
-              Wound care, <span className="h-serif text-[--color-rose]">straight answers</span>.
+              Wound care, <span className="h-serif text-[var(--color-rose)]">straight answers</span>.
             </h2>
           </Reveal>
           <dl className="space-y-2">
             {FAQS.map((f, i) => (
               <Reveal key={i}>
-                <details className="group border border-[--color-border] rounded-md overflow-hidden">
-                  <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[--color-linen]">
-                    <dt className="font-display text-[--color-plum] text-lg leading-snug">{f.q}</dt>
-                    <span className="text-[--color-rose] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
+                <details className="group border border-[var(--color-border)] rounded-md overflow-hidden">
+                  <summary className="cursor-pointer list-none flex items-baseline justify-between gap-6 p-5 hover:bg-[var(--color-linen)]">
+                    <dt className="font-display text-[var(--color-plum)] text-lg leading-snug">{f.q}</dt>
+                    <span className="text-[var(--color-rose)] font-mono text-sm group-open:rotate-45 transition-transform">+</span>
                   </summary>
-                  <dd className="px-5 pb-5 text-[--color-muted] leading-relaxed">{f.a}</dd>
+                  <dd className="px-5 pb-5 text-[var(--color-muted)] leading-relaxed">{f.a}</dd>
                 </details>
               </Reveal>
             ))}
@@ -237,20 +237,20 @@ export default function WoundCarePage() {
         </div>
       </section>
 
-      <section className="bg-[--color-plum] text-[--color-linen]">
+      <section className="bg-[var(--color-plum)] text-[var(--color-linen)]">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center sm:px-10">
           <Reveal>
-            <p className="h-serif text-[--color-rose-soft]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.5rem)" }}>
+            <p className="h-serif text-[var(--color-rose-soft)]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.5rem)" }}>
               It takes a village to save limbs.
             </p>
-            <h2 className="mt-6 h-display text-[--color-linen]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
+            <h2 className="mt-6 h-display text-[var(--color-linen)]" style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", lineHeight: 1.05 }}>
               Bring us the wound. We&apos;ll bring the team.
             </h2>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <Link href="/contact" className="bg-[--color-rose] text-white px-7 py-4 font-semibold rounded-full hover:bg-[--color-rose-deep] transition-colors">
+              <Link href="/contact" className="bg-[var(--color-rose)] text-white px-7 py-4 font-semibold rounded-full hover:bg-[var(--color-rose-deep)] transition-colors">
                 Request an appointment
               </Link>
-              <a href={`tel:${CLINIC.phone}`} className="border border-[--color-linen]/30 text-[--color-linen] px-7 py-4 font-semibold rounded-full hover:border-[--color-linen] transition-colors">
+              <a href={`tel:${CLINIC.phone}`} className="border border-[var(--color-linen)]/30 text-[var(--color-linen)] px-7 py-4 font-semibold rounded-full hover:border-[var(--color-linen)] transition-colors">
                 Call {CLINIC.phoneDisplay}
               </a>
             </div>

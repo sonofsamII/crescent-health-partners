@@ -32,7 +32,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ───── Hero ───── */}
-      <section className="border-b border-[--color-border] bg-[--color-cream]">
+      <section className="border-b border-[var(--color-border)] bg-[var(--color-cream)]">
         <div className="mx-auto max-w-[1200px] px-6 py-28 text-center sm:px-10 sm:py-36">
           <div className="eyebrow mb-6">About Crescent Health Partners</div>
           <h1
@@ -52,7 +52,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───── Story ───── */}
-      <section className="bg-[--color-paper]">
+      <section className="bg-[var(--color-paper)]">
         <div className="mx-auto max-w-[820px] px-6 py-24 sm:px-10 sm:py-28">
           <Reveal className="mb-12">
             <div className="eyebrow mb-4">Our story</div>
@@ -71,24 +71,24 @@ export default function AboutPage() {
       </section>
 
       {/* ───── Lisa long bio ───── */}
-      <section className="border-y border-[--color-border] bg-[--color-cream]">
+      <section className="border-y border-[var(--color-border)] bg-[var(--color-cream)]">
         <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-24 sm:px-10 sm:py-28 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
             <div className="provider-photo mx-auto max-w-[360px]">
               <div className="provider-photo-initials" aria-hidden>LR</div>
             </div>
-            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.32em] text-[--color-muted]">
+            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.32em] text-[var(--color-muted)]">
               Photo coming soon
             </p>
           </Reveal>
           <Reveal className="lg:col-span-7" delay={0.1}>
             <div className="eyebrow mb-4">Provider</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
-              Lisa Rivera,<br/><span className="font-mono text-[--color-rose-deep] tracking-tight" style={{ fontSize: "0.5em" }}>MSN, FNP-C, WCC</span>
+              Lisa Rivera,<br/><span className="font-mono text-[var(--color-rose-deep)] tracking-tight" style={{ fontSize: "0.5em" }}>MSN, FNP-C, WCC</span>
             </h2>
             <p className="prose-body mt-7">{LISA_BIO_LONG}</p>
 
-            <div className="mt-8 grid gap-y-3 border-t border-[--color-border] pt-6 text-[14px] sm:grid-cols-2">
+            <div className="mt-8 grid gap-y-3 border-t border-[var(--color-border)] pt-6 text-[14px] sm:grid-cols-2">
               {[
                 ["Board certification", "Family Nurse Practitioner"],
                 ["Wound care", "WCC — NAWCO certified"],
@@ -96,12 +96,12 @@ export default function AboutPage() {
                 ["Years in nursing", "38"],
               ].map(([k, v]) => (
                 <div key={k} className="flex flex-col gap-1">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[--color-muted]">{k}</span>
-                  <span className="font-serif text-[--color-ink]">{v}</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--color-muted)]">{k}</span>
+                  <span className="font-serif text-[var(--color-ink)]">{v}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-8 font-mono text-[10.5px] uppercase tracking-[0.3em] text-[--color-muted]">
+            <p className="mt-8 font-mono text-[10.5px] uppercase tracking-[0.3em] text-[var(--color-muted)]">
               [Placeholder — Sam to confirm or edit]
             </p>
           </Reveal>
@@ -109,17 +109,17 @@ export default function AboutPage() {
       </section>
 
       {/* ───── Kim long bio ───── */}
-      <section className="bg-[--color-paper]">
+      <section className="bg-[var(--color-paper)]">
         <div className="mx-auto grid max-w-[1200px] gap-12 px-6 py-24 sm:px-10 sm:py-28 lg:grid-cols-12">
           <Reveal className="order-2 lg:order-1 lg:col-span-7">
             <div className="eyebrow mb-4">Provider · Co-founder</div>
             <h2 className="h-display" style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}>
               Kimberly Dianne Billie Jackson,<br/>
-              <span className="font-mono text-[--color-rose-deep] tracking-tight" style={{ fontSize: "0.5em" }}>MSN, AGNP-C</span>
+              <span className="font-mono text-[var(--color-rose-deep)] tracking-tight" style={{ fontSize: "0.5em" }}>MSN, AGNP-C</span>
             </h2>
             <p className="prose-body mt-7">{KIM_BIO_LONG}</p>
 
-            <div className="mt-8 grid gap-y-3 border-t border-[--color-border] pt-6 text-[14px] sm:grid-cols-2">
+            <div className="mt-8 grid gap-y-3 border-t border-[var(--color-border)] pt-6 text-[14px] sm:grid-cols-2">
               {[
                 ["Board certification", "Adult-Gerontology Primary Care NP"],
                 ["Education", "University of South Carolina, '97"],
@@ -127,12 +127,12 @@ export default function AboutPage() {
                 ["Years in nursing", "26"],
               ].map(([k, v]) => (
                 <div key={k} className="flex flex-col gap-1">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[--color-muted]">{k}</span>
-                  <span className="font-serif text-[--color-ink]">{v}</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[var(--color-muted)]">{k}</span>
+                  <span className="font-serif text-[var(--color-ink)]">{v}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-8 font-mono text-[10.5px] uppercase tracking-[0.3em] text-[--color-muted]">
+            <p className="mt-8 font-mono text-[10.5px] uppercase tracking-[0.3em] text-[var(--color-muted)]">
               [Placeholder — Sam to confirm or edit]
             </p>
           </Reveal>
@@ -140,7 +140,7 @@ export default function AboutPage() {
             <div className="provider-photo mx-auto max-w-[360px]">
               <div className="provider-photo-initials" aria-hidden>KJ</div>
             </div>
-            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.32em] text-[--color-muted]">
+            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.32em] text-[var(--color-muted)]">
               Photo coming soon
             </p>
           </Reveal>
@@ -148,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───── Approach ───── */}
-      <section className="border-y border-[--color-border] bg-[--color-cream-deep]">
+      <section className="border-y border-[var(--color-border)] bg-[var(--color-cream-deep)]">
         <div className="mx-auto max-w-[1200px] px-6 py-24 sm:px-10 sm:py-28">
           <Reveal className="mb-12">
             <div className="eyebrow mb-4">How we practice</div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
               },
             ].map((b) => (
               <Reveal key={b.t}>
-                <div className="border-t-2 border-[--color-rose] pt-6">
+                <div className="border-t-2 border-[var(--color-rose)] pt-6">
                   <h3 className="h-display" style={{ fontSize: "1.6rem" }}>{b.t}</h3>
                   <p className="prose-body mt-4 text-[15.5px]">{b.d}</p>
                 </div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
       </section>
 
       {/* ───── Final CTA ───── */}
-      <section className="bg-[--color-ink] text-white">
+      <section className="bg-[var(--color-ink)] text-white">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center sm:px-10 sm:py-28">
           <Reveal>
             <div className="font-mono text-[11px] uppercase tracking-[0.32em] text-white/55">
@@ -193,7 +193,7 @@ export default function AboutPage() {
               className="mx-auto mt-6 max-w-[22ch] font-serif text-white"
               style={{ fontSize: "clamp(2.2rem, 5vw, 3.6rem)", lineHeight: 1.08 }}
             >
-              A clinic that <em className="text-[--color-rose-soft]">knows your name.</em>
+              A clinic that <em className="text-[var(--color-rose-soft)]">knows your name.</em>
             </h2>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link href="/contact" className="btn btn-accent">

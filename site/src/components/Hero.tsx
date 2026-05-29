@@ -13,7 +13,7 @@ export function Hero() {
   const reduced = useReducedMotion();
   return (
     <section
-      className="relative isolate flex w-full overflow-hidden bg-[--color-ink]"
+      className="relative isolate flex w-full overflow-hidden bg-[var(--color-ink)]"
       style={{ minHeight: "min(94vh, 920px)" }}
     >
       {/* Video bed */}
@@ -62,7 +62,7 @@ export function Hero() {
             }}
           >
             The clinic where{" "}
-            <em className="text-[--color-rose-soft] not-italic" style={{ fontStyle: "italic" }}>
+            <em className="text-[var(--color-rose-soft)] not-italic" style={{ fontStyle: "italic" }}>
               care is the practice
             </em>
             .
