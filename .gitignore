@@ -11,3 +11,10 @@ brand-assets/
 chp-*.html
 chp_*.html
 chp_*.txt
+# v0.2 — raw stock video downloads (massive); only the rendered
+# output under site/public/hero-video.* is committed.
+assets-raw/
+verify/
+*.png
+homepage-screenshot*.png
+wound-care-screenshot.png

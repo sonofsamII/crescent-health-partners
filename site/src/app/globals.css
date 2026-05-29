@@ -1,22 +1,47 @@
 @import "tailwindcss";
 
+/*
+ * v0.2 — Crescent Health Partners
+ *
+ * Brief: epionebh.com / emilmd.com aesthetic translated for a community
+ * wound-care + family-practice in Sumter & Columbia, SC. Same restrained-
+ * luxury typography, layout, and whitespace. Warmer community-medicine
+ * palette: warm cream + off-white grounds + rose as ACCENT only + sage
+ * for trust signals. "Subtle. Warm. Trusted."
+ */
+
 @theme {
-  /* Brand: "PINK Partners" — warm rose primary, healing plum ink, linen ground, sage accent.
-     Built for a medical clinic that calls itself warm, safe, private, non-judgmental. */
+  /* Grounds */
+  --color-cream: #faf7f4;          /* primary section ground */
+  --color-cream-deep: #f1ebe4;     /* slightly more saturated cream */
+  --color-paper: #ffffff;          /* alternating sections */
+
+  /* Type */
+  --color-ink: #1a1a1a;            /* deep charcoal — primary text */
+  --color-ink-soft: #2d2826;       /* slightly warmed deep */
+  --color-muted: #6b6260;          /* warm gray — body muted */
+  --color-muted-soft: #a59c98;     /* eyebrows, meta, dividers-on-dark */
+
+  /* Accents (kept from v0.1 but DEMOTED to accent role only) */
   --color-rose: #c84a6e;
   --color-rose-deep: #a83a5a;
   --color-rose-soft: #e6a8b9;
-  --color-plum: #3a1e2a;
-  --color-plum-deep: #281319;
-  --color-linen: #f7f2ee;
-  --color-linen-warm: #efe6df;
+
+  /* Trust/health accent */
   --color-sage: #7c9a86;
   --color-sage-soft: #c3d4c9;
-  --color-ink: #1f1419;
-  --color-muted: #7a6b70;
-  --color-muted-soft: #b6a8ad;
-  --color-border: #e4d8d3;
-  --color-border-strong: #c9b9b3;
+
+  /* Hairlines */
+  --color-border: rgba(26, 26, 26, 0.08);
+  --color-border-strong: rgba(26, 26, 26, 0.16);
+
+  /* Legacy aliases — preserved so existing pages don't break before
+     they're rewritten. They map to the new palette so visually
+     everything is the new system. */
+  --color-linen: var(--color-cream);
+  --color-linen-warm: var(--color-cream-deep);
+  --color-plum: var(--color-ink);
+  --color-plum-deep: var(--color-ink-soft);
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);
@@ -25,78 +50,228 @@
 }
 
 html {
-  background: var(--color-linen);
+  background: var(--color-cream);
   color: var(--color-ink);
 }
 body {
-  background: var(--color-linen);
+  background: var(--color-cream);
   color: var(--color-ink);
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
 }
 
-::selection { background: var(--color-rose); color: var(--color-linen); }
+::selection { background: var(--color-rose); color: #fff; }
 :focus-visible { outline: 2px solid var(--color-rose); outline-offset: 3px; }
 
 a { color: inherit; text-decoration: none; }
 
-/* Display heading — generous spacing, serious sans */
+/* ─── Typography system ─────────────────────────────────────────────
+ * Hero/headline: serif (Cormorant), generous letter-spacing.
+ * Body: clean sans (Inter), 16-18px, 1.65-1.75 line-height.
+ */
+
 .h-display {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  color: var(--color-plum);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  line-height: 1.08;
+  color: var(--color-ink);
+}
+.h-display em,
+.h-display .accent {
+  font-style: italic;
+  color: var(--color-rose-deep);
 }
 .h-serif {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.005em;
 }
 
 .font-serif { font-family: var(--font-serif); }
-.font-display { font-family: var(--font-display); }
+.font-display { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif; }
 
-/* Eyebrow — small caps utility */
+/* Eyebrow — small caps utility, NOW UPPERCASE BLACK (not pink) for
+   restrained luxury read. Pink only on dark grounds. */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+.eyebrow-rose {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--color-rose-deep);
+  font-weight: 500;
 }
 
-/* Card surface for the linen-on-linen treatment */
+/* Body — 17-18px target */
+.prose-body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+.prose-body strong { color: var(--color-ink); font-weight: 500; }
+
+/* ─── Buttons ───────────────────────────────────────────────────────
+ * Per brief: slightly rounded rectangle (6px radius), high contrast,
+ * subtle hover. NOT pill-shaped — that read too casual.
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: all 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--color-ink);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-rose-deep);
+}
+.btn-accent {
+  background: var(--color-rose);
+  color: #fff;
+}
+.btn-accent:hover {
+  background: var(--color-rose-deep);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-border-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--color-ink);
+}
+.btn-ghost-light {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,0.4);
+}
+.btn-ghost-light:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+/* ─── Card surface ──────────────────────────────────────────────── */
 .card {
   background: #ffffff;
   border: 1px solid var(--color-border);
-  border-radius: 4px;
-  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1), border-color 300ms, box-shadow 300ms;
+  border-radius: 6px;
+  transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 350ms,
+              box-shadow 400ms;
 }
 .card-hover:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-rose-soft);
-  box-shadow: 0 20px 50px -20px rgba(58, 30, 42, 0.15);
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 24px 60px -28px rgba(26, 26, 26, 0.18);
 }
 
-/* Subtle warm gradient for hero — like a sunrise over linen */
+/* ─── Hero gradient (legacy — used by inner pages) ──────────────── */
 .hero-bg {
   background:
-    radial-gradient(ellipse 90% 60% at 80% 0%, rgba(200, 74, 110, 0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 10% 100%, rgba(124, 154, 134, 0.08) 0%, transparent 60%),
-    var(--color-linen);
+    radial-gradient(ellipse 90% 60% at 80% 0%, rgba(200, 74, 110, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 10% 100%, rgba(124, 154, 134, 0.05) 0%, transparent 60%),
+    var(--color-cream);
 }
 
-/* Hairline divider used for sections */
+/* ─── Hairline divider ──────────────────────────────────────────── */
 .divider {
   height: 1px;
   background: linear-gradient(to right, transparent, var(--color-border-strong), transparent);
 }
 
-/* Reduce motion respect */
+/* ─── Provider photo placeholder ────────────────────────────────────
+ * Warm-tinted abstract gradient since we don't have real photos yet.
+ */
+.provider-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 30%, rgba(200,74,110,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 70%, rgba(124,154,134,0.16) 0%, transparent 60%),
+    linear-gradient(135deg, #efe6df 0%, #e9d9d1 100%);
+  border: 1px solid var(--color-border);
+}
+.provider-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% 30%, rgba(255,255,255,0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+.provider-photo-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(4rem, 8vw, 7rem);
+  color: rgba(26, 26, 26, 0.18);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+/* ─── Hero video overlay ────────────────────────────────────────── */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(26, 26, 26, 0.42) 0%,
+      rgba(26, 26, 26, 0.30) 35%,
+      rgba(26, 26, 26, 0.45) 70%,
+      rgba(26, 26, 26, 0.65) 100%);
+  pointer-events: none;
+}
+
+/* ─── Marquee (testimonials slow-scroll) ────────────────────────── */
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee-track {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: marquee-scroll 60s linear infinite;
+}
+.marquee-pause:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ─── Horizontal scroll conditions list ─────────────────────────── */
+.scroll-x-hide::-webkit-scrollbar { display: none; }
+.scroll-x-hide { scrollbar-width: none; }
+
+/* ─── Reduce motion ─────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .card-hover { transition: none; }
   .card-hover:hover { transform: none; }
+  .marquee-track { animation: none; }
 }

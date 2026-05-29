@@ -114,6 +114,24 @@ const clinicSchema = {
   ],
 };
 
+// Standalone Physician schemas for each provider — AEO/LLM citation
+// engines often resolve providers by name + credentials independently
+// of the parent business node. Both are linked to the clinic via
+// worksFor and live under the site-wide JSON-LD graph.
+const physicianSchemas = PROVIDERS.map((p) => ({
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "@id": `${SITE_URL}#${p.id}`,
+  name: p.name,
+  honorificSuffix: p.credentials,
+  jobTitle: p.role,
+  description: p.bio,
+  medicalSpecialty: p.specialties,
+  worksFor: { "@id": `${SITE_URL}#business` },
+  url: `${SITE_URL}/about`,
+  knowsLanguage: p.id === "kim-jackson" ? ["English", "Spanish"] : ["English"],
+}));
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -134,10 +152,13 @@ const organizationSchema = {
   ],
 };
 
+// v0.2 — drop the sans display in favor of the serif for headlines.
+// Geist is still imported so legacy --font-display has a value, but
+// every component uses .h-display (serif) for headlines now.
 const display = Geist({ subsets: ["latin"], display: "swap", variable: "--font-display", weight: ["400", "500", "600"] });
 const body = Inter({ subsets: ["latin"], display: "swap", variable: "--font-body", weight: ["400", "500", "600"] });
 const mono = Geist_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono", weight: ["400", "500"] });
-const serif = Cormorant_Garamond({ subsets: ["latin"], display: "swap", variable: "--font-serif", weight: ["400", "500", "600"], style: ["italic", "normal"] });
+const serif = Cormorant_Garamond({ subsets: ["latin"], display: "swap", variable: "--font-serif", weight: ["400", "500", "600", "700"], style: ["italic", "normal"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -180,6 +201,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        {physicianSchemas.map((p, i) => (
+          <script
+            key={p["@id"]}
+            id={`ld-physician-${i}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(p) }}
+          />
+        ))}
         <Nav />
         <main>{children}</main>
         <Footer />
